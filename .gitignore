@@ -1,0 +1,7 @@
+.cursor/
+*.exe
+__pycache__/
+service
+.venv/
+target/
+*.so
