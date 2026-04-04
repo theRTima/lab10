@@ -42,10 +42,22 @@
 **Инструмент:** Auto режим в Cursor.
 **Промпт:** "Now, work in /hard. In there, create two folders, call them python-service and go-service. We need to turn task 5 on python and task 3 in go into little services. Go(gin) as a backend and Python as a gateway"
 **Результат:** Просто скопировал и переметил файлы для более удобной работы. Вся работоспособность остается такой же
+### Промпт 2
+**Инструмент:** Auto режим в Cursor.
+**Промпт:** "Now only work in folders /hard, /go-service and /python-service. Add a JWT authentification in go service and check tockens from Python"
+**Результат:** Рабочая проверка токенов. Использовался запрос из задания 3. Для доступа к эндпоинту POST /profile теперь требуется JWT-токен, который можно получить через эндпоинт /auth/token в Go-сервисе. При непрпавльном запросе или токене, python не позволит сделать запрос на Go сервис.
+### Промпт 3
+**Инструмент:** Auto режим в Cursor.
+**Промпт:** "create a /cmd adn /internal for go-service, sort go service with new file structure. Organize go-service"
+**Результат:** Переорганизация файлов. Теперь гораздо удобнее и логичнее ориентироваться в проекте.
+### Промпт 4
+**Инструмент:** Auto режим в Cursor.
+**Промпт:** ""
+**Результат:** 
 ### Итого
-- Количество промптов: 
-- Что пришлось исправлять вручную:
-- Время:
+- Количество промптов: 3
+- Что пришлось исправлять вручную: 
+- Время: ~ 20 минут
 ---
 ## Задание Повышенной сложности 2: Развернуть оба сервиса в Docker Compose с общей сетью..
 ### Промпт 1
