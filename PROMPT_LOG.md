@@ -63,10 +63,10 @@ Python should reject wrong data before sending it to go, test token forwarding a
 ## Задание Повышенной сложности 2: Развернуть оба сервиса в Docker Compose с общей сетью..
 ### Промпт 1
 **Инструмент:** Auto режим в Cursor.
-**Промпт:** ""
-**Результат:** 
+**Промпт:** "Now deploy these two services into a docker compose with the same network. Also create a basic .dockerignore file."
+**Результат:** Создались Dockerfile для двух сервисов. Собрал командой docker compose up --build -d. Сервисы работают как до этого. Весь функционал сохранился. При просмотре docker compose logs -f мы можем в этом убедиться.
 ### Итого
-- Количество промптов: 
-- Что пришлось исправлять вручную:
-- Время:
+- Количество промптов: 1
+- Что пришлось исправлять вручную: При перемещении pyton тестов в отдельную папку /test, тест не мог найти main.py. Починил созданием __init__.py
+- Время: ~ 30 минут
 ---
