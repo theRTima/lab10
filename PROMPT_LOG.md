@@ -40,8 +40,8 @@
 ## Задание Повышенной сложности 1: Добавить аутентификацию (JWT) в Go-сервисе и проверять токены из Python.
 ### Промпт 1
 **Инструмент:** Auto режим в Cursor.
-**Промпт:** ""
-**Результат:** 
+**Промпт:** "Now, work in /hard. In there, create two folders, call them python-service and go-service. We need to turn task 5 on python and task 3 in go into little services. Go(gin) as a backend and Python as a gateway"
+**Результат:** Просто скопировал и переметил файлы для более удобной работы. Вся работоспособность остается такой же
 ### Итого
 - Количество промптов: 
 - Что пришлось исправлять вручную:
