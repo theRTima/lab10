@@ -8,7 +8,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// NewRouter builds the Gin engine with public routes and JWT-protected /profile.
 func NewRouter() *gin.Engine {
 	r := gin.Default()
 	secret := config.JWTSecret()

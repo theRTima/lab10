@@ -52,11 +52,12 @@
 **Результат:** Переорганизация файлов. Теперь гораздо удобнее и логичнее ориентироваться в проекте.
 ### Промпт 4
 **Инструмент:** Auto режим в Cursor.
-**Промпт:** ""
-**Результат:** 
+**Промпт:** "Now create a go-test and python-test for created services. Go test should test jwt generation, test /profile call without token, and wrong data with right token.
+Python should reject wrong data before sending it to go, test token forwarding and make sure that status returned by go is the same one returned by python."
+**Результат:** Создались go-тест и pyton-тест. Go тест проверяет генерацию JWT токена, вызов /profile без токена и неправильные данные с правльным токеном. Python тест проверяет, что неправильные данные отклоняются, без запроса в GO, а так же что статус отображаемый python, такой же, который вернул GO.
 ### Итого
-- Количество промптов: 3
-- Что пришлось исправлять вручную: 
+- Количество промптов: 4
+- Что пришлось исправлять вручную: Ничего. Однако стоит отметить WARNING при прохождении python теста. Он предупреждает о том, что длинна токена ниже рекомендуемой. (20 байт vs 32 рекомендуемых)
 - Время: ~ 20 минут
 ---
 ## Задание Повышенной сложности 2: Развернуть оба сервиса в Docker Compose с общей сетью..
