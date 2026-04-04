@@ -26,6 +26,10 @@
 ## Задание Средней сложности 3: Передавать сложные структуры данных (JSON) между сервисами.
 ### Промпт 1
 **Инструмент:** Auto режим в Cursor.
+**Промпт:** "Create a folder inside /mid, name it "5". Create a FastAPI endpoint that receives a 'Profile' (from 3.go) JSON object and forwards it to a Go service at http://localhost:8080/profile using the httpx library. Use Pydantic for validation on the Python side to match the Go struct."
+**Результат:** main.py и requirements.txt. Запустил FastAPI сервис на 8000 порту - uvicorn main:app --reload --port 8000, после чего подаю POST запрос на этот же порт (такой же запрос с email и именем). Получаю сообщение - INFO: 127.0.0.1:54417 - "POST /profile HTTP/1.1" 201 Created от python, а так же в командной строке где запущен go - "GIN] 2026/04/04 - 17:08:47 | 201 |        87.5µs |             ::1 | POST     "/profile"". Полностью рабочая передача JSON.
+### Промпт 2
+**Инструмент:** Auto режим в Cursor.
 **Промпт:** ""
 **Результат:** 
 ### Итого
