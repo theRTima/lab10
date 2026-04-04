@@ -14,10 +14,14 @@
 **Инструмент:** Auto режим в Cursor.
 **Промпт:** "Now we need to implement a go input validation. Create a separate folder, name it "3". Use code from 1.go, add an email validation, with check of age and name length"
 **Результат:** Рабочая валидация, проврил POST - curl -X POST http://localhost:8080/profile -H "Content-Type: application/json" -d '{"display_name": "T", "email": "not-an-email", "age": 200}' {"error":"Key: 'profileBody.DisplayName' Error:Field validation for 'DisplayName' failed on the 'min' tag\nKey: 'profileBody.Email' Error:Field validation for 'Email' failed on the 'email' tag\nKey: 'profileBody.Age' Error:Field validation for 'Age' failed on the 'lte' tag"}% - ожидаемый результат, с правильными данными ошибки не наблюдается.
+### Промпт 2
+**Инструмент:** Auto режим в Cursor.
+**Промпт:** "Now, create a go-test file for 3.go. It should check GET for /hello/:name, POST for /profile."
+**Результат:** Рабочий go-test, проверяет все нужные эндпоинты. Запуск с помощью "go test -v" выдает ожидаемый результат.
 ### Итого
-- Количество промптов: 1
+- Количество промптов: 2
 - Что пришлось исправлять вручную: Агент криво завершил работу сервера, стандартный порт не освобождался. Пришлось вручную искать процесс по занятому порту и выключать его. Помимо этого, все работает в соответсвии с запросом.
-- Время:
+- Время: ~ 15 минут
 ---
 ## Задание Средней сложности 3: Передавать сложные структуры данных (JSON) между сервисами.
 ### Промпт 1
